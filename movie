@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Ticket Booking</title>
+    <title>Movie Booking System</title>
 
     <style>
 
@@ -15,14 +15,14 @@
         }
 
         body{
-            background:#111827;
+            background:#0f172a;
             color:white;
         }
 
         /* Header */
 
         header{
-            background:#000;
+            background:#020617;
             padding:15px 40px;
             display:flex;
             justify-content:space-between;
@@ -30,7 +30,7 @@
         }
 
         header h1{
-            color:#ff3c3c;
+            color:#ef4444;
         }
 
         nav a{
@@ -41,7 +41,7 @@
         }
 
         nav a:hover{
-            color:#ff3c3c;
+            color:#ef4444;
         }
 
         /* Hero Section */
@@ -58,15 +58,15 @@
         }
 
         .hero h2{
-            font-size:45px;
+            font-size:50px;
             margin-bottom:10px;
         }
 
         .hero p{
-            font-size:20px;
+            font-size:22px;
         }
 
-        /* Movies */
+        /* Movies Section */
 
         .movies{
             padding:50px 20px;
@@ -74,8 +74,8 @@
         }
 
         .movies h2{
+            color:#ef4444;
             margin-bottom:40px;
-            color:#ff3c3c;
             font-size:35px;
         }
 
@@ -87,8 +87,8 @@
         }
 
         .movie-card{
-            background:#1f2937;
-            width:280px;
+            width:300px;
+            background:#1e293b;
             border-radius:10px;
             overflow:hidden;
             box-shadow:0 0 10px rgba(0,0,0,0.5);
@@ -105,22 +105,24 @@
         }
 
         .movie-card p{
+            color:#cbd5e1;
             padding:0 15px 15px;
-            color:#d1d5db;
         }
 
         .btn{
             display:inline-block;
             margin-bottom:20px;
             padding:10px 20px;
-            background:#ff3c3c;
+            background:#ef4444;
             color:white;
             text-decoration:none;
+            border:none;
             border-radius:5px;
+            cursor:pointer;
         }
 
         .btn:hover{
-            background:#d62828;
+            background:#dc2626;
         }
 
         /* Booking Form */
@@ -128,7 +130,7 @@
         .booking{
             width:400px;
             margin:50px auto;
-            background:#1f2937;
+            background:#1e293b;
             padding:30px;
             border-radius:10px;
         }
@@ -136,7 +138,7 @@
         .booking h2{
             text-align:center;
             margin-bottom:20px;
-            color:#ff3c3c;
+            color:#ef4444;
         }
 
         .booking input,
@@ -150,14 +152,12 @@
 
         .booking button{
             width:100%;
-            border:none;
-            cursor:pointer;
         }
 
         /* Footer */
 
         footer{
-            background:#000;
+            background:#020617;
             text-align:center;
             padding:15px;
             margin-top:40px;
@@ -171,23 +171,27 @@
     <!-- Header -->
 
     <header>
-        <h1>MovieZone</h1>
+
+        <h1>CineBook</h1>
 
         <nav>
             <a href="#">Home</a>
             <a href="#">Movies</a>
-            <a href="#">Offers</a>
+            <a href="#">Theaters</a>
             <a href="#">Contact</a>
         </nav>
+
     </header>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
 
     <section class="hero">
+
         <div>
-            <h2>Book Your Movie Tickets Online</h2>
-            <p>Fast • Easy • Secure</p>
+            <h2>Book Movie Tickets Online</h2>
+            <p>Enjoy Your Favorite Movies Anytime</p>
         </div>
+
     </section>
 
     <!-- Movies -->
@@ -199,33 +203,39 @@
         <div class="movie-container">
 
             <div class="movie-card">
-                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c">
 
-                <h3>Avengers</h3>
-
-                <p>Action | Adventure | Sci-Fi</p>
-
-                <a href="#" class="btn">Book Now</a>
-            </div>
-
-            <div class="movie-card">
                 <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1">
 
-                <h3>Batman</h3>
+                <h3>Action Hero</h3>
 
-                <p>Action | Thriller</p>
+                <p>Action | Adventure | 2h 20m</p>
 
-                <a href="#" class="btn">Book Now</a>
+                <button class="btn">Book Ticket</button>
+
             </div>
 
             <div class="movie-card">
+
                 <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728">
 
-                <h3>Spider Man</h3>
+                <h3>Spider World</h3>
 
-                <p>Adventure | Fantasy</p>
+                <p>Fantasy | Adventure | 2h 10m</p>
 
-                <a href="#" class="btn">Book Now</a>
+                <button class="btn">Book Ticket</button>
+
+            </div>
+
+            <div class="movie-card">
+
+                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c">
+
+                <h3>Dark Knight</h3>
+
+                <p>Thriller | Action | 2h 30m</p>
+
+                <button class="btn">Book Ticket</button>
+
             </div>
 
         </div>
@@ -236,7 +246,7 @@
 
     <section class="booking">
 
-        <h2>Book Ticket</h2>
+        <h2>Movie Ticket Booking</h2>
 
         <form>
 
@@ -244,9 +254,16 @@
 
             <select required>
                 <option>Select Movie</option>
-                <option>Avengers</option>
-                <option>Batman</option>
-                <option>Spider Man</option>
+                <option>Action Hero</option>
+                <option>Spider World</option>
+                <option>Dark Knight</option>
+            </select>
+
+            <select required>
+                <option>Select Show Time</option>
+                <option>10:00 AM</option>
+                <option>02:00 PM</option>
+                <option>07:00 PM</option>
             </select>
 
             <input type="date" required>
@@ -262,7 +279,9 @@
     <!-- Footer -->
 
     <footer>
-        <p>© 2026 MovieZone. All Rights Reserved.</p>
+
+        <p>© 2026 CineBook. All Rights Reserved.</p>
+
     </footer>
 
 </body>
