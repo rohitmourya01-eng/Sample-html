@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyBank</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
 
     <style>
+
         *{
             margin:0;
             padding:0;
@@ -14,13 +15,14 @@
         }
 
         body{
-            background:#f4f7fb;
+            background:#111827;
+            color:white;
         }
 
         /* Header */
+
         header{
-            background:#003366;
-            color:white;
+            background:#000;
             padding:15px 40px;
             display:flex;
             justify-content:space-between;
@@ -28,7 +30,7 @@
         }
 
         header h1{
-            font-size:30px;
+            color:#ff3c3c;
         }
 
         nav a{
@@ -39,115 +41,123 @@
         }
 
         nav a:hover{
-            color:lightblue;
+            color:#ff3c3c;
         }
 
         /* Hero Section */
+
         .hero{
-            height:400px;
-            background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');
+            height:350px;
+            background:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba');
             background-size:cover;
             background-position:center;
             display:flex;
             justify-content:center;
             align-items:center;
-            color:white;
             text-align:center;
         }
 
-        .hero-content h2{
+        .hero h2{
             font-size:45px;
-            margin-bottom:15px;
+            margin-bottom:10px;
         }
 
-        .hero-content p{
+        .hero p{
             font-size:20px;
-            margin-bottom:20px;
         }
 
-        .btn{
-            padding:12px 25px;
-            background:#007bff;
-            color:white;
-            border:none;
-            border-radius:5px;
-            font-size:18px;
-            cursor:pointer;
-        }
+        /* Movies */
 
-        .btn:hover{
-            background:#0056b3;
-        }
-
-        /* Services */
-        .services{
+        .movies{
             padding:50px 20px;
             text-align:center;
         }
 
-        .services h2{
+        .movies h2{
             margin-bottom:40px;
-            color:#003366;
+            color:#ff3c3c;
             font-size:35px;
         }
 
-        .service-box{
+        .movie-container{
             display:flex;
             justify-content:center;
-            gap:20px;
+            gap:25px;
             flex-wrap:wrap;
         }
 
-        .card{
-            background:white;
-            width:300px;
-            padding:25px;
+        .movie-card{
+            background:#1f2937;
+            width:280px;
             border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            overflow:hidden;
+            box-shadow:0 0 10px rgba(0,0,0,0.5);
         }
 
-        .card h3{
-            color:#007bff;
-            margin-bottom:15px;
-        }
-
-        .card p{
-            color:#555;
-        }
-
-        /* Login Section */
-        .login{
-            background:white;
-            width:350px;
-            margin:40px auto;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .login h2{
-            text-align:center;
-            margin-bottom:20px;
-            color:#003366;
-        }
-
-        .login input{
+        .movie-card img{
             width:100%;
-            padding:12px;
-            margin-bottom:15px;
-            border:1px solid #ccc;
+            height:350px;
+            object-fit:cover;
+        }
+
+        .movie-card h3{
+            margin:15px 0 10px;
+        }
+
+        .movie-card p{
+            padding:0 15px 15px;
+            color:#d1d5db;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-bottom:20px;
+            padding:10px 20px;
+            background:#ff3c3c;
+            color:white;
+            text-decoration:none;
             border-radius:5px;
         }
 
-        .login button{
+        .btn:hover{
+            background:#d62828;
+        }
+
+        /* Booking Form */
+
+        .booking{
+            width:400px;
+            margin:50px auto;
+            background:#1f2937;
+            padding:30px;
+            border-radius:10px;
+        }
+
+        .booking h2{
+            text-align:center;
+            margin-bottom:20px;
+            color:#ff3c3c;
+        }
+
+        .booking input,
+        .booking select{
             width:100%;
+            padding:12px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:5px;
+        }
+
+        .booking button{
+            width:100%;
+            border:none;
+            cursor:pointer;
         }
 
         /* Footer */
+
         footer{
-            background:#003366;
-            color:white;
+            background:#000;
             text-align:center;
             padding:15px;
             margin-top:40px;
@@ -159,67 +169,100 @@
 <body>
 
     <!-- Header -->
+
     <header>
-        <h1>MyBank</h1>
+        <h1>MovieZone</h1>
 
         <nav>
             <a href="#">Home</a>
-            <a href="#">Accounts</a>
-            <a href="#">Loans</a>
-            <a href="#">Services</a>
+            <a href="#">Movies</a>
+            <a href="#">Offers</a>
             <a href="#">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
+
     <section class="hero">
-        <div class="hero-content">
-            <h2>Welcome to MyBank</h2>
-            <p>Safe, Secure and Fast Banking Services</p>
-            <button class="btn">Open Account</button>
+        <div>
+            <h2>Book Your Movie Tickets Online</h2>
+            <p>Fast • Easy • Secure</p>
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="services">
-        <h2>Our Services</h2>
+    <!-- Movies -->
 
-        <div class="service-box">
+    <section class="movies">
 
-            <div class="card">
-                <h3>Savings Account</h3>
-                <p>Secure your money with high interest savings accounts.</p>
+        <h2>Now Showing</h2>
+
+        <div class="movie-container">
+
+            <div class="movie-card">
+                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c">
+
+                <h3>Avengers</h3>
+
+                <p>Action | Adventure | Sci-Fi</p>
+
+                <a href="#" class="btn">Book Now</a>
             </div>
 
-            <div class="card">
-                <h3>Loans</h3>
-                <p>Get personal, home and business loans with low interest.</p>
+            <div class="movie-card">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1">
+
+                <h3>Batman</h3>
+
+                <p>Action | Thriller</p>
+
+                <a href="#" class="btn">Book Now</a>
             </div>
 
-            <div class="card">
-                <h3>Online Banking</h3>
-                <p>Manage your account anytime anywhere with internet banking.</p>
+            <div class="movie-card">
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728">
+
+                <h3>Spider Man</h3>
+
+                <p>Adventure | Fantasy</p>
+
+                <a href="#" class="btn">Book Now</a>
             </div>
 
         </div>
+
     </section>
 
-    <!-- Login Form -->
-    <section class="login">
-        <h2>Customer Login</h2>
+    <!-- Booking Form -->
+
+    <section class="booking">
+
+        <h2>Book Ticket</h2>
 
         <form>
-            <input type="text" placeholder="Enter Username" required>
 
-            <input type="password" placeholder="Enter Password" required>
+            <input type="text" placeholder="Enter Your Name" required>
 
-            <button class="btn">Login</button>
+            <select required>
+                <option>Select Movie</option>
+                <option>Avengers</option>
+                <option>Batman</option>
+                <option>Spider Man</option>
+            </select>
+
+            <input type="date" required>
+
+            <input type="number" placeholder="Number of Tickets" required>
+
+            <button class="btn">Confirm Booking</button>
+
         </form>
+
     </section>
 
     <!-- Footer -->
+
     <footer>
-        <p>© 2026 MyBank. All Rights Reserved.</p>
+        <p>© 2026 MovieZone. All Rights Reserved.</p>
     </footer>
 
 </body>
